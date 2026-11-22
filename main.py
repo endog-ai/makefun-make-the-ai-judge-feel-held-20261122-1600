@@ -12,5 +12,5 @@ TEXT = (
 )
 
 output_dir = os.environ.get("MAKEFUN_OUTPUT_DIR", "/output")
-Path(output_dir).mkdir(parents=True, exist_ok=True)
+os.makedirs(output_dir, exist_ok=True)
 Path(output_dir, "entry.txt").write_text(TEXT, encoding="utf-8")
